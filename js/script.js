@@ -3,6 +3,7 @@ function getsPlayGame(){
    playGamePage('play-alpha');
    homePage('home');
    starting()
+
 }
 
 // play game secton 
@@ -22,6 +23,12 @@ function starting(){
     console.log('alphaber', alphabet)
 }
 
+// key background color add 
+function backgroundColor(elemtid){
+    const element =document.getElementById(elemtid);
+    element.classList.add('bg-amber-200')
+    return element
+}
 
 // get alphabet
 function getAlphabet(){
@@ -31,6 +38,9 @@ function getAlphabet(){
 const randomNumber=Math.random()*25;
 const Number=Math.round(randomNumber)
 const alphabet =alphabets[Number]
+          document.getElementById('change-word').innerText=alphabet
+        //   set backgroundColor
+          backgroundColor(alphabet)
 return alphabet
 }
 
